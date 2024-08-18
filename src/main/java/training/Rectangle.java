@@ -1,4 +1,4 @@
-package training.jep441;
+package training;
 
 public record Rectangle(double width, double height) implements Shape {
 
