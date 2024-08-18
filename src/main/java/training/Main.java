@@ -7,11 +7,10 @@ import java.util.SequencedCollection;
 public class Main {
 
     void main() {
-        Main main = new Main();
-        Collection<Shape> shapes = main.getShapes();
+        Collection<Shape> shapes = getShapes();
         shapes.forEach(shape -> {
-            System.out.println(main.getDimensions(shape));
-            System.out.println(main.getArea(shape));
+            System.out.println(getDimensions(shape));
+            System.out.println(getArea(shape));
         });
     }
 
