@@ -29,7 +29,7 @@ public class Main {
                     throw new RuntimeException("circle radius cannot be negative");
             case Circle circle -> circle.getArea();
             case null -> throw new RuntimeException("shape cannot be null");
-            default -> 0;
+            default -> throw new RuntimeException("shape unknown");
         };
     }
 
