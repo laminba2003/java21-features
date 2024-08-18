@@ -1,23 +1,25 @@
 package training;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Collection;
+import java.util.SequencedCollection;
 
 public class Main {
 
     void main() {
         Main main = new Main();
-        List<Shape> shapes = main.getShapes();
+        Collection<Shape> shapes = main.getShapes();
         shapes.forEach(shape -> {
             System.out.println(main.getDimensions(shape));
             System.out.println(main.getArea(shape));
         });
     }
 
-    public List<Shape> getShapes() {
-        List<Shape> shapes = new ArrayList<>();
-        shapes.add(new Rectangle(10, 20));
-        shapes.add(new Circle(3.50));
+    public Collection<Shape> getShapes() {
+        SequencedCollection<Shape> shapes = new ArrayList<>();
+        shapes.addLast(new Rectangle(10, 20));
+        shapes.addFirst(new Circle(3.50));
+        shapes.add(new Circle(2.50));
         return shapes;
     }
 
